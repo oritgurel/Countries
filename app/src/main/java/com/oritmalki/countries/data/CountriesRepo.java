@@ -33,7 +33,6 @@ public class CountriesRepo {
     @Inject
     CountriesApiService mApiService;
 
-
     @RequiresApi(api = Build.VERSION_CODES.N)
     public CountriesRepo(AppExecutors appExecutors) {
         CountriesApp.getComponent().inject(this);

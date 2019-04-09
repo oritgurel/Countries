@@ -8,6 +8,8 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import javax.inject.Inject;
+
 public class AppExecutors {
     /**
      * Settings.Global executor pools for the whole application.
@@ -29,6 +31,7 @@ public class AppExecutors {
         this.mainThread = mainThread;
     }
 
+    @Inject
     public AppExecutors() {
         this(Executors.newSingleThreadExecutor(), Executors.newFixedThreadPool(THREAD_COUNT),
                 new MainThreadExecutor());

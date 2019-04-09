@@ -13,13 +13,13 @@ public class DataModule {
 
     @Provides
     @Singleton
-    AppExecutors provideExecutors() {
+    protected AppExecutors provideExecutors() {
         return new AppExecutors();
     }
 
     @Provides
     @Singleton
-    CountriesRepo provideCountriesRepo(AppExecutors appExecutors) {
+    protected CountriesRepo provideCountriesRepo(AppExecutors appExecutors) {
         return new CountriesRepo(appExecutors);
     }
 }

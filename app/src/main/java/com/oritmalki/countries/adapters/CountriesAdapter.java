@@ -39,6 +39,10 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Coun
         notifyDataSetChanged();
     }
 
+    public List<RespCountry> getCountries() {
+        return mCountries;
+    }
+
     @NonNull
     @Override
     public CountryViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {

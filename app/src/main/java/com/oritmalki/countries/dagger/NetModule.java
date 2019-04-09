@@ -18,7 +18,7 @@ public class NetModule {
 
     @Provides
     @Singleton
-    Retrofit provideRetrofit() {
+    protected Retrofit provideRetrofit() {
         return new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -29,13 +29,13 @@ public class NetModule {
 
     @Provides
     @Singleton
-    INetworkApi providesINetworkApi(Retrofit retrofit) {
+    protected INetworkApi providesINetworkApi(Retrofit retrofit) {
         return retrofit.create(INetworkApi.class);
     }
 
     @Provides
     @Singleton
-    CountriesApiService provideCountriesApiService() {
+    protected CountriesApiService provideCountriesApiService() {
         return new CountriesApiService();
     }
 

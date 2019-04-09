@@ -38,6 +38,10 @@ android {
         exclude 'META-INF/proguard/androidx-annotations.pro'
     }
 
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
 }
 
 dependencies {
@@ -64,7 +68,11 @@ dependencies {
 
     // dagger - dependency injection
     implementation 'com.google.dagger:dagger:2.22.1'
+    implementation 'com.google.dagger:dagger-android-support:2.22.1'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.16'
+    testAnnotationProcessor 'com.google.dagger:dagger-compiler:2.16'
+
 
     // google maps - maps api
     implementation 'com.google.android.gms:play-services:12.0.1'
@@ -75,4 +83,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
+
+    // dagger mock - for testing
+    testImplementation 'com.github.fabioCollini.daggermock:daggermock:0.8.1'
+    androidTestImplementation 'com.github.fabioCollini.daggermock:daggermock:0.8.1'
+
+
 }
