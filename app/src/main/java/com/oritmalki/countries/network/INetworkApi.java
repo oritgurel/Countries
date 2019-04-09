@@ -18,7 +18,4 @@ public interface INetworkApi {
     @GET(PATH_ALL)
     CompletableFuture<List<RespCountry>> getAllCountries(@Query(FIELDS_QUERY) String fields);
 
-    @GET(PATH_ALL)
-    CompletableFuture<List<RespCountry>> testGetAllCountries(@Query(FIELDS_QUERY) String fields);
-
 }

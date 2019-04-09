@@ -11,8 +11,6 @@ import dagger.Provides;
 @Module
 public class DataModule {
 
-    //todo create room
-
     @Provides
     @Singleton
     AppExecutors provideExecutors() {

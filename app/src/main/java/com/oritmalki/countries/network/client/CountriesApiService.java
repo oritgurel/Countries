@@ -47,19 +47,4 @@ public class CountriesApiService {
         });
     }
 
-//    public void getAllCountries(String fields, final INetworkResponseListener listener) {
-//        retrofit2.Call<List<RespCountry>> respCountryCall = mINetworkApi.getAllCountries(fields);
-//        respCountryCall.enqueue(new Callback<List<RespCountry>>() {
-//            @Override
-//            public void onResponse(retrofit2.Call<List<RespCountry>> call, Response<List<RespCountry>> response) {
-//                    listener.onSuccess(response);
-//            }
-//
-//            @Override
-//            public void onFailure(retrofit2.Call<List<RespCountry>> call, Throwable t) {
-//                    listener.onError(t.getMessage());
-//            }
-//        });
-//    }
-
 }

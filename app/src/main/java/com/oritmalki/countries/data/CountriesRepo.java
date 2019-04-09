@@ -63,18 +63,4 @@ public class CountriesRepo {
         return mObservableCountries;
     }
 
-//    INetworkResponseListener mListener = new INetworkResponseListener() {
-//        @Override
-//        public void onSuccess(Response response) {
-//            mCountries = ((List<RespCountry>)((Response<RespCountry>) response).body());
-//
-//            //todo observe countries
-//            mObservableCountries.postValue(mCountries);
-//        }
-//
-//        @Override
-//        public void onError(String message) {
-//            Log.e("getCountries - Error", message);
-//        }
-//    };
 }

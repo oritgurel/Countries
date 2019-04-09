@@ -83,7 +83,6 @@ public class MapFragment extends Fragment {
                         .title(mCaptialName)
                         .icon(getBitmapDescriptorFromVector(R.drawable.ic_place_24dp)));
 
-                //todo add my location marker
 
             }
         });

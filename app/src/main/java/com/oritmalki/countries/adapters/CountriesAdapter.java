@@ -64,7 +64,7 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Coun
             RequestBuilder<PictureDrawable> requestBuilder = GlideToVectorYou
                     .init()
                     .with((MainActivity)holder.mFlagIv.getContext())
-//                   todo .setPlaceHolder()
+//                  .setPlaceHolder()
                     .getRequestBuilder();
 
             requestBuilder
