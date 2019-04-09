@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/act_main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent">
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/map_hight"
+        android:background="@color/grey_background"
+        app:layout_constraintTop_toBottomOf="@+id/act_main_toolbar"
+        tools:context=".MapFragment"></FrameLayout>
+
+    <TextView
+        android:id="@+id/act_separator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_height"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/map_container"/>
+
+    <TextView
+        android:id="@+id/act_country_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/country_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="16dp"
+        android:textSize="@dimen/text_size_large"
+        android:textAllCaps="true"
+        android:text="@string/welcome"
+        app:layout_constraintTop_toBottomOf="@+id/act_separator"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/act_region_details_subtitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginTop="@dimen/subtitle_margin_top"
+        android:paddingEnd="@dimen/def_margin_start"
+        android:gravity="start"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_country_tv"
+        android:text="@string/prompt_text" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_end_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="344dp" />
+
+    <TextView
+        android:id="@+id/act_languages_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/country_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginBottom="@dimen/def_padding"
+        android:textSize="@dimen/text_size_medium"
+        android:text="@string/languages"
+        app:layout_constraintBottom_toTopOf="@+id/act_countries_recyclerview"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/act_Translations_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/country_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginBottom="@dimen/def_padding"
+        android:textSize="@dimen/text_size_medium"
+        android:text="Translations"
+        app:layout_constraintStart_toEndOf="@id/act_languages_tv"
+        app:layout_constraintBottom_toTopOf="@+id/act_countries_recyclerview"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="450dp" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/act_countries_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/guidline"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.constraint.ConstraintLayout>

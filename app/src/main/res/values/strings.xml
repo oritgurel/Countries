@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Countries</string>
+    <string name="languages">Languages</string>
+    <string name="subtitle_item_comma_format">%s,</string>
+    <string name="subtitle_parenthesis_format">(%s)</string>
+    <string name="prompt_text">Please select a country to show its info. \nYou may also use the search menu. \nEnjoy!</string>
+    <string name="welcome">Welcome</string>
+</resources>

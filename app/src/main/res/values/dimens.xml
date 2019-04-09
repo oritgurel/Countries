@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="map_hight">150dp</dimen>
+    <dimen name="separator_height">3dp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="def_margin_start">16dp</dimen>
+    <dimen name="country_margin_top">25dp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="subtitle_margin_top">10dp</dimen>
+    <dimen name="inline_space_margin">5dp</dimen>
+    <dimen name="inline_margin_start">5dp</dimen>
+    <dimen name="flag_size">64dp</dimen>
+    <dimen name="def_padding">16dp</dimen>
+</resources>
