@@ -24,7 +24,7 @@ import retrofit2.Response;
 public class CountriesRepo {
 
     private List<RespCountry> mCountries;
-    private AppExecutors mAppExecutors;
+    private AppExecutors mAppExecutors; //currently not in use, essential for making database calls when applicable.
     private final String FIELDS_QUERY_PARAMS = "name;capital;region;subregion;latlng;languages;translations;flag;nativeName";
 
     private MediatorLiveData mObservableCountries;
