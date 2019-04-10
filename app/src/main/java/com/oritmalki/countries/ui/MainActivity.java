@@ -24,6 +24,7 @@ import android.widget.TextView;
 
 import com.oritmalki.countries.CountriesApp;
 import com.oritmalki.countries.R;
+import com.oritmalki.countries.Utils;
 import com.oritmalki.countries.adapters.CountriesAdapter;
 import com.oritmalki.countries.data.CountriesRepo;
 import com.oritmalki.countries.maps.MapFragment;
@@ -162,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements CountriesAdapter.
     private void updateCountryInfo(RespCountry country) {
         showInfoViews(true);
         mCountryTv.setText(country.getName());
-        String subtitle = formatSubtitle(country);
+        String subtitle = Utils.formatSubtitle(country);
         mRegionSubtitleTv.setText(subtitle);
     }
 
@@ -174,26 +175,7 @@ public class MainActivity extends AppCompatActivity implements CountriesAdapter.
         }
     }
 
-    private String formatSubtitle(RespCountry country) {
-        String region = country.getRegion();
-        String subregion = country.getSubregion();
-        String capital = country.getCapital();
-        String nativeName = country.getNativeName() == null ? "" : String.format(getString(R.string.subtitle_parenthesis_format), country.getNativeName());
 
-        String[] subtitleWords = {region, subregion, capital, nativeName};
-
-        StringBuilder sb = new StringBuilder();
-        String separator = "";
-        for (int i=0; i<subtitleWords.length-1; i++) {
-            sb.append(separator);
-            sb.append(subtitleWords[i]);
-            separator = subtitleWords[i+1].isEmpty() ? "" : ", ";
-        }
-        sb.append(" ");
-        sb.append(nativeName);
-        sb.trimToSize();
-        return sb.toString();
-    }
 
     private void updateMap(RespCountry country) {
         //extract latlng

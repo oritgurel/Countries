@@ -6,7 +6,7 @@ def apiProps = new Properties()
 if (apiPropsFile.exists()) {
     apiProps.load(apiPropsFile.newDataInputStream())
 } else {
-    throw new GradleException("prop_api_keys.properties")
+    throw new FileNotFoundException("prop_api_keys.properties")
 }
 
 android {
